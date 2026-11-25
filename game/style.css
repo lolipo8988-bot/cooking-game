@@ -1,0 +1,37 @@
+/* The Gilded Skillet — page shell. All game art is drawn on the canvas;
+   this sheet only frames the stage and keeps it centred at any size. */
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #241611;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(1200px 700px at 50% 30%, #3a2317 0%, #241611 70%);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+#stage {
+  width: min(1120px, 100vw);
+  line-height: 0;
+}
+#game {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 0 4px #120b07;
+  cursor: pointer;
+  touch-action: none;
+}
+/* Read aloud, never shown: the line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
